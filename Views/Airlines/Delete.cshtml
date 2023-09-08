@@ -1,0 +1,48 @@
+﻿@model Airlines.Model.Airline
+
+<form class="prod" method="post" asp-action="Delete" asp-controller="Airlines">
+<h2>Are you sure to Delete</h2>
+<table class="table-bordered">
+    <tr>
+        <td>
+            Id
+        </td>
+        <td>
+            @Html.DisplayFor(Model=>Model.Id)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            @Html.DisplayFor(Model=>Model.Name)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Founding Year
+        </td>
+        <td>
+            @Html.DisplayFor(Model=>Model.FoundingYear)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Origin Country
+        </td>
+        <td>
+            @Html.DisplayFor(Model=>Model.OriginCountry)
+
+        </td>
+    </tr>
+</table>
+   <div class="col">
+   <div class="ro">
+   <button type="submit" class="btn btn-primary">Delete</button>
+    </div>
+    <div class="ro">
+        <a  class="btn btn-success" asp-action="Index" asp-controller="Airlines">Back to List</a>
+    </div>
+    </div>
+</form>

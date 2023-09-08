@@ -1,0 +1,43 @@
+﻿@model Airlines.Model.Airline
+
+<table class="table-bordered" style="margin-left:300px;margin-top:200px">
+    <tr>
+        <td>
+            Id
+        </td>
+        <td>
+            @Html.DisplayFor(Model=>Model.Id)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Name
+        </td>
+        <td>
+            @Html.DisplayFor(Model=>Model.Name)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Founding Year
+        </td>
+        <td>
+            @Html.DisplayFor(Model=>Model.FoundingYear)
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Origin Country
+        </td>
+        <td>
+            @Html.DisplayFor(Model=>Model.OriginCountry)
+
+        </td>
+    </tr>
+ 
+</table>
+
+<div style="margin-left:400px;margin-top:30px">
+    <a class="btn btn-success" asp-action="Index" asp-controller="Airlines">Back to List</a>
+</div>
+ 

@@ -1,0 +1,44 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+.col>.ro{
+    float:left;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+html {
+  position: relative;
+  min-height: 100%;
+}
+.prod{
+    margin-left:300px;
+    margin-top:200px;
+}
+
+
+.header {
+    background: linear-gradient(45deg,#5efce8,#736efe);
+    padding: 10px 10px;
+    border-bottom: 5px solid #736efe;
+}
+.container-fluid {
+    margin-left: 550px;
+}
+.table{
+ 
+    padding:100px 100px;
+   
+}
+
+
+body {
+    background: linear-gradient(45deg,#5efce8,#736efe);
+    margin-bottom: 60px;
+  
+}
