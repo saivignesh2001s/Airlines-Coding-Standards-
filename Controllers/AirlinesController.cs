@@ -14,9 +14,9 @@ namespace Airlines.Controllers
             _airlineMethods = airlineMethods;
             _mapper = mapper;
         }
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-           var airlinesList= _airlineMethods.GetAll();
+           var airlinesList=_airlineMethods.GetAll();
            return View(airlinesList);
         }
         public IActionResult Create()
@@ -60,10 +60,10 @@ namespace Airlines.Controllers
                 return View(airline);
             }
         }
-        public IActionResult Details(string id)
+        public async Task<IActionResult> Details(string id)
         {
-            var airline = _airlineMethods.Get(id);
-            return View(airline);
+            var airline =_airlineMethods.Get(id);
+            return  View(airline);
 
         }
         public IActionResult Delete(string id)

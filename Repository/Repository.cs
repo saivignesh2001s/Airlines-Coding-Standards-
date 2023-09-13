@@ -25,7 +25,7 @@ namespace Airlines.Repository
             }
         }
 
-        public T? Get(string id)
+        public  T? Get(string id)
         {
             return _airlineDbContext.Set<T>().Find(id);
         }
