@@ -15,8 +15,9 @@ using Microsoft.EntityFrameworkCore;
   builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
            
   string? connectionString = builder.Configuration.GetConnectionString("default").ToString();
-  builder.Services.AddDbContext<AirlineDbContext>(options=>options.UseSqlServer(connectionString));
-  builder.Services.AddTransient<IRepository<Airline>, Repository<Airline>>();
+// builder.Services.AddDbContext<AirlineDbContext>(options=>options.UseSqlServer(connectionString));
+builder.Services.AddDbContext<AirlineDbContext>(options => options.UseMySQL(connectionString));
+builder.Services.AddTransient<IRepository<Airline>, Repository<Airline>>();
 
   var app = builder.Build();
 
